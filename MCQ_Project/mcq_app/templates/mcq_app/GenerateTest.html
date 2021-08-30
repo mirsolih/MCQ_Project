@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Amount</title>
+</head>
+<style>
+table, td, tr{
+border: 1px solid black;
+border-collapse: collapse; 
+}
+td{
+    padding: 15px;
+}
+table{
+    border-spacing: 5px;
+}
+
+</style>
+<body>
+    {% for message in messages %}
+    <p1 id = "messages">{{message}}</p1>
+    {% endfor %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value = 'Save' />
+    </form><br>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {% for cat_amount in cat_amount %}
+        <table style="width:50%">
+            <tr>
+                <td>{{cat_amount.template}}</td>
+                <td>{{cat_amount.category}}</td>
+                <td>{{cat_amount.quantity}}</td>
+            </tr>
+        </table>
+        
+        {% endfor %}
+                
+    <input type="button" value="Save">
+    </form>
+    
+    <h3>Templates</h3>
+    {% for template in template %}
+    <h4><a href="">{{template.name}}</a></h4>
+    {% endfor %}
+    
+    <h3>Created Tests</h3>
+    {% for test in test %}
+    <h4><a href="">{{test.name}}</a></h4>
+    {% endfor %}
+    
+    
+</body>
+</html>

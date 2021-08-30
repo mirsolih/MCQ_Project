@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Test itself</h1>
+    {% for test in test %}
+        <h2>{{test.name}}</h2>
+   {% for cat_amount in cat_amount %}
+        <h2>{{cat_amount.category}}</h2>
+        <h2>{{cat_amount.quantity}}</h2>
+    {% endfor %}   
+    {% endfor %}
+    {% for answer in answer %}
+        <h2>{{answer.question}}</h2>
+        <h4>{{answer.a}}</h4>
+        <h4>{{answer.b}}</h4>
+        <h4>{{answer.c}}</h4>
+    {% endfor %} 
+</body>
+</html>

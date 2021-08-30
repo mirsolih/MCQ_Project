@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Everything</h3>
+    {% for answer in answer %}
+    <h3>{{answer.question.text}}</h3>
+    <form action="">
+        <div class = "radio">
+            <label>a) {{answer.a}}</label><br>
+        </div>
+        <div class="radio">
+            <label>b) {{answer.b}}</label><br>
+        </div>
+        <div class="">
+            <label>c) {{answer.c}}</label><br>
+        </div>
+        <div class="">
+            <label>correct -> {{answer.correct}}</label><br>
+        </div>
+        <label>Your answer:</label> 
+        <input type="text">
+    {% endfor %}<br><br>
+        <input type="submit">
+    </form>
+    
+    
+</body>
+</html>

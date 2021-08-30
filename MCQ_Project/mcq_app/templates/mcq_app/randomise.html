@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomise</title>
+</head>
+<body>
+    <h3>Randomise</h3>
+    {% for answer in answer %}
+    <h3>{{answer.question.text}}</h3>
+    <li>
+        <ul>{{answer.a}}</ul>
+        <ul>{{answer.b}}</ul>
+        <ul>{{answer.c}}</ul>
+    </li>
+    {% endfor %}<br><br>
+
+    {% for cat_amount in cat_amount %}
+        <table style="width:50%">
+            <tr>
+                <td>{{cat_amount.template}}</td>
+                <td>{{cat_amount.category}}</td>
+                <td>{{cat_amount.quantity}}</td>
+            </tr>
+        </table>
+        
+        {% endfor %}
+    
+</body>
+</html>
